@@ -1,10 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 
 import { ExampleComponent } from 'chakra-ui'
-import 'chakra-ui/dist/index.css'
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+export function App() {
+  return <ExampleComponent />
 }
-
-export default App
