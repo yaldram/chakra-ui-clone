@@ -1,18 +1,24 @@
 import * as React from 'react'
-import { VStack, Box } from 'chakra-ui-clone'
+import { HStack, Square, Circle } from 'chakra-ui-clone'
 
 export function App() {
   return (
-    <VStack m='1rem' align='stretch'>
-      <Box p='md' h='40px' bg='yellow200'>
+    <HStack spacing='4xl'>
+      <Square size='40px' bg='tomato' color='white'>
         1
-      </Box>
-      <Box p='md' h='40px' bg='tomato'>
+      </Square>
+      <Square
+        as='span'
+        size='40px'
+        bg='tomato'
+        color='white'
+        centerContent={false}
+      >
         2
-      </Box>
-      <Box p='md' h='40px' bg='pink100'>
+      </Square>
+      <Circle size='40px' bg='tomato' color='white'>
         3
-      </Box>
-    </VStack>
+      </Circle>
+    </HStack>
   )
 }
