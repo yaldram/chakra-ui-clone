@@ -1,16 +1,18 @@
 import * as React from 'react'
-import { Box, Flex, Spacer } from 'chakra-ui-clone'
+import { VStack, Box } from 'chakra-ui-clone'
 
 export function App() {
   return (
-    <Flex m='1rem' color='white'>
-      <Box size='100px' p='md' bg='red400'>
-        Box 1
+    <VStack m='1rem' align='stretch'>
+      <Box p='md' h='40px' bg='yellow200'>
+        1
       </Box>
-      <Spacer />
-      <Box size='100px' p='md' bg='green400'>
-        Box 2
+      <Box p='md' h='40px' bg='tomato'>
+        2
       </Box>
-    </Flex>
+      <Box p='md' h='40px' bg='pink100'>
+        3
+      </Box>
+    </VStack>
   )
 }
