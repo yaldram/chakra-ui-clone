@@ -1,10 +1,10 @@
 {
-  "name": "chakra-ui",
+  "name": "chakra-ui-clone",
   "version": "1.0.0",
   "description": "Chakra UI Elements Clone",
-  "author": "https://gitlab.com/yaldram",
+  "author": "https://github.com/yaldram",
   "license": "MIT",
-  "repository": "https://gitlab.com/yaldram/chakra-ui-clone",
+  "repository": "https://github.com/yaldram/chakra-ui-clone",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -30,7 +30,8 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
-    "react": "17.0.2"
+    "react": "17.0.2",
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -48,6 +49,7 @@
     "@types/node": "^12.12.38",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.12",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
     "babel-eslint": "^10.0.3",
@@ -76,6 +78,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "^3.4.1",
     "storybook-readme": "^5.0.9",
+    "styled-components": "^5.3.0",
     "typescript": "^3.7.5"
   },
   "files": [

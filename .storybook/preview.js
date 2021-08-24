@@ -2,7 +2,7 @@ import React from 'react'
 import { create } from '@storybook/theming'
 import { addReadme } from 'storybook-readme'
 
-// import { ChakraProvider } from '../src/provider'
+import { ChakraProvider } from '../src/provider'
 
 const basicTheme = create({
   base: 'light',
@@ -45,4 +45,11 @@ export const parameters = {
   }
 }
 
-export const decorators = [addReadme, (Story) => <Story />]
+export const decorators = [
+  addReadme,
+  (Story) => (
+    <ChakraProvider>
+      <Story />
+    </ChakraProvider>
+  )
+]
