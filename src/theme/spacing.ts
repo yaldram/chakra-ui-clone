@@ -10,4 +10,14 @@ export const spacing = {
   '4xl': '3.6rem'
 }
 
+export function spacingOptions() {
+  const options = Object.keys(spacing)
+  const labels = Object.entries(spacing).reduce((acc, [key, value]) => {
+    acc[key] = `${key} (${value})`
+    return acc
+  }, {})
+
+  return { options, labels }
+}
+
 export type Space = typeof spacing
