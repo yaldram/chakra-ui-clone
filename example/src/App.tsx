@@ -1,10 +1,16 @@
 import * as React from 'react'
-import { Box } from 'chakra-ui-clone'
+import { Box, Flex, Spacer } from 'chakra-ui-clone'
 
 export function App() {
   return (
-    <Box bg='red400' color='white' p='3rem' m='1rem'>
-      Hello World
-    </Box>
+    <Flex m='1rem' color='white'>
+      <Box size='100px' p='md' bg='red400'>
+        Box 1
+      </Box>
+      <Spacer />
+      <Box size='100px' p='md' bg='green400'>
+        Box 2
+      </Box>
+    </Flex>
   )
 }
