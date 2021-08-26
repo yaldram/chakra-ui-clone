@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import shouldForwardProp from '@styled-system/should-forward-prop'
 import {
   system,
   compose,
@@ -26,7 +27,6 @@ import {
   PositionProps,
   BorderProps
 } from 'styled-system'
-import shouldForwardProp from '@styled-system/should-forward-prop'
 
 type BoxOptions = {
   w?: LayoutProps['width']

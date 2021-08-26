@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled, { CSSProperties } from 'styled-components'
+import shouldForwardProp from '@styled-system/should-forward-prop'
 import {
   compose,
   display,
@@ -39,7 +40,9 @@ export type TextProps = DisplayProps &
     children?: React.ReactNode
   }
 
-const BaseText = styled.p<TextProps>`
+const BaseText = styled.p.withConfig({
+  shouldForwardProp
+})<TextProps>`
   ${compose(space, display, typography, color, borderRadius, layout)}
   ${system({
     whiteSpace: true,
