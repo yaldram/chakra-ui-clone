@@ -1,14 +1,17 @@
 import * as React from 'react'
-import { SimpleGrid, Box } from 'chakra-ui-clone'
+import { Text } from 'chakra-ui-clone'
 
 export function App() {
   return (
-    <SimpleGrid columns={3} spacingX='40px' spacingY='20px'>
-      <Box bg='tomato' height='80px'></Box>
-      <Box bg='tomato' height='80px'></Box>
-      <Box bg='tomato' height='80px'></Box>
-      <Box bg='tomato' height='80px'></Box>
-      <Box bg='tomato' height='80px'></Box>
-    </SimpleGrid>
+    <>
+      <Text fontSize='50px' color='tomato'>
+        I'm using a custom font-size value for this text
+      </Text>
+      <Text as='i'>Italic</Text>
+      <br />
+      <Text as='u'>Underline</Text>
+      <br />
+      <Text as='s'>Strike Through</Text>
+    </>
   )
 }

@@ -64,4 +64,17 @@ export const typography = {
   }
 }
 
+export function fontSizesOptions() {
+  const options = Object.keys(typography.fontSizes)
+  const labels = Object.entries(typography.fontSizes).reduce(
+    (acc, [key, value]) => {
+      acc[key] = `${key} (${value})`
+      return acc
+    },
+    {}
+  )
+
+  return { options, labels }
+}
+
 export type Typography = typeof typography
