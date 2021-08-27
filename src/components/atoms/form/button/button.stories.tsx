@@ -3,7 +3,8 @@ import * as React from 'react'
 import { colorSchemeOptions } from '../../../../theme/colors'
 import { Stack } from '../../layout'
 import { Button, ButtonProps } from './button'
-import { EmailIcon, ArrowForwardIcon } from '../../icons'
+import { IconButton } from './icon-button'
+import { EmailIcon, ArrowForwardIcon, SearchIcon, PhoneIcon } from '../../icons'
 
 export default {
   title: 'Atoms/Form/Button'
@@ -179,6 +180,31 @@ export const Default = {
           Call us
         </Button>
       </Stack>
+    </Stack>
+  )
+}
+
+export const ButtonIcon = {
+  render: () => (
+    <Stack>
+      <IconButton aria-label='Search database' icon={<SearchIcon />} />
+      <IconButton
+        colorScheme='blue'
+        aria-label='Search database'
+        icon={<SearchIcon />}
+      />
+      <IconButton
+        variant='outline'
+        colorScheme='teal'
+        aria-label='Send email'
+        icon={<EmailIcon />}
+      />
+      <IconButton
+        colorScheme='teal'
+        aria-label='Call Segun'
+        s='lg'
+        icon={<PhoneIcon />}
+      />
     </Stack>
   )
 }
