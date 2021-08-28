@@ -1,7 +1,8 @@
 import * as React from 'react'
 
 import { colorSchemeOptions } from '../../../theme/colors'
-import { Stack } from '../layout'
+import { Box, Flex, Stack } from '../layout'
+import { Avatar } from '../avatar'
 import { Text } from '../typography'
 import { Badge, BadgeProps } from '.'
 
@@ -63,7 +64,20 @@ export const Default = {
           Removed
         </Badge>
       </Stack>
-
+      <Flex>
+        <Avatar src='https://bit.ly/sage-adebayo' />
+        <Box ml='1rem'>
+          <Text fontWeight='bold'>
+            Segun Adebayo
+            <Badge ml='0.25rem' colorScheme='green'>
+              New
+            </Badge>
+          </Text>
+          <Text mt='0.25rem' fontSize='sm'>
+            UI Engineer
+          </Text>
+        </Box>
+      </Flex>
       <Stack>
         <Text fontSize='xl' fontWeight='bold'>
           Segun Adebayo

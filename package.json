@@ -51,6 +51,7 @@
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.12",
     "@types/styled-system": "^5.1.13",
+    "@types/tinycolor2": "^1.4.3",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
     "babel-eslint": "^10.0.3",
@@ -87,7 +88,8 @@
   ],
   "dependencies": {
     "@styled-system/should-forward-prop": "^5.1.5",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "tinycolor2": "^1.4.2"
   },
   "lint-staged": {
     "*.+(ts|tsx)": [

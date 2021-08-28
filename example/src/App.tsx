@@ -1,34 +1,43 @@
 import * as React from 'react'
-import { Stack, Badge, Text } from 'chakra-ui-clone'
+import {
+  Stack,
+  Avatar,
+  AvatarGroup,
+  AvatarBadge,
+  AiOutlineUser
+} from 'chakra-ui-clone'
 
 export function App() {
   return (
-    <Stack m='lg' direction='column' spacing='xl'>
+    <Stack m='1rem' direction='column' spacing='xl'>
       <Stack>
-        <Badge>Default</Badge>
-        <Badge colorScheme='green'>Success</Badge>
-        <Badge colorScheme='red'>Removed</Badge>
-        <Badge colorScheme='purple'>New</Badge>
+        <Avatar src='https://bit.ly/broken-link' />
+        <Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence' />
+        <Avatar name='Segun Adebayo' />
+        <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
+        <Avatar name='Prosper Otemuyiwa' src='https://bit.ly/prosper-baba' />
+        <Avatar name='Christian Nwamba' src='https://bit.ly/code-beast' />
       </Stack>
       <Stack>
-        <Badge variant='outline' colorScheme='green'>
-          Default
-        </Badge>
-        <Badge variant='solid' colorScheme='green'>
-          Success
-        </Badge>
-        <Badge variant='subtle' colorScheme='green'>
-          Removed
-        </Badge>
+        <Avatar>
+          <AvatarBadge size='1.25em' bg='green500' />
+        </Avatar>
+        <Avatar>
+          <AvatarBadge borderColor='papayawhip' bg='tomato' size='1.25em' />
+        </Avatar>
       </Stack>
-
       <Stack>
-        <Text fontSize='xl' fontWeight='bold'>
-          Segun Adebayo
-          <Badge ml='0.25rem' fontSize='0.8em' colorScheme='green'>
-            New
-          </Badge>
-        </Text>
+        <Avatar bg='red500' icon={<AiOutlineUser fontSize='1.5rem' />} />
+        <Avatar bg='teal500' />
+      </Stack>
+      <Stack>
+        <AvatarGroup s='lg' max={3}>
+          <Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence' />
+          <Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
+          <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
+          <Avatar name='Prosper Otemuyiwa' src='https://bit.ly/prosper-baba' />
+          <Avatar name='Christian Nwamba' src='https://bit.ly/code-beast' />
+        </AvatarGroup>
       </Stack>
     </Stack>
   )

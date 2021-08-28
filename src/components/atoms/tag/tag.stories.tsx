@@ -2,6 +2,8 @@ import * as React from 'react'
 
 import { colorSchemeOptions } from '../../../theme/colors'
 import { Stack, HStack } from '../layout'
+import { EmailIcon } from '../icons'
+import { Avatar } from '../avatar'
 import {
   Tag,
   TagLeftIcon,
@@ -10,7 +12,6 @@ import {
   TagCloseButton,
   TagProps
 } from '.'
-import { EmailIcon } from '../icons'
 
 export default {
   title: 'Atoms/Tags'
@@ -108,6 +109,18 @@ export const Default = {
             <TagCloseButton />
           </Tag>
         ))}
+      </HStack>
+      <HStack>
+        <Tag s='lg' colorScheme='red' borderRadius='9999px'>
+          <Avatar
+            src='https://bit.ly/sage-adebayo'
+            s='xs'
+            name='Segun Adebayo'
+            ml='-0.25rem'
+            mr='0.5rem'
+          />
+          <TagLabel>Segun</TagLabel>
+        </Tag>
       </HStack>
     </Stack>
   )
