@@ -1,36 +1,35 @@
 import * as React from 'react'
-import {
-  useToast,
-  Box,
-  Wrap,
-  WrapItem,
-  Button,
-  AlertStatus,
-  AlertVariants,
-  ToastPosition
-} from 'chakra-ui-clone'
 
-const statuses: AlertStatus[] = ['success', 'error', 'warning', 'info']
-const variants: AlertVariants[] = [
-  'solid',
-  'subtle',
-  'left-accent',
-  'top-accent'
-]
-const positions: ToastPosition[] = [
-  'top',
-  'top-right',
-  'top-left',
-  'bottom',
-  'bottom-right',
-  'bottom-left'
-]
+import { Box, Wrap, WrapItem } from '../../atoms'
+import { Button } from '../../atoms/form'
+import { AlertStatus, AlertVariants } from '../alert'
+import { ToastPosition } from './toast.types'
+import { useToast } from './use-toast'
 
-export function App() {
+export default {
+  title: 'Molecules/Toast'
+}
+
+export const Default = () => {
   const toast = useToast()
+  const statuses: AlertStatus[] = ['success', 'error', 'warning', 'info']
+  const variants: AlertVariants[] = [
+    'solid',
+    'subtle',
+    'left-accent',
+    'top-accent'
+  ]
+  const positions: ToastPosition[] = [
+    'top',
+    'top-right',
+    'top-left',
+    'bottom',
+    'bottom-right',
+    'bottom-left'
+  ]
 
   return (
-    <Box m='1rem'>
+    <>
       <Wrap>
         <Button
           onClick={() =>
@@ -98,6 +97,6 @@ export function App() {
           </WrapItem>
         ))}
       </Wrap>
-    </Box>
+    </>
   )
 }

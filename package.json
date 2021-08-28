@@ -87,7 +87,9 @@
     "dist"
   ],
   "dependencies": {
+    "@reach/alert": "^0.16.0",
     "@styled-system/should-forward-prop": "^5.1.5",
+    "framer-motion": "^4.1.17",
     "styled-system": "^5.1.5",
     "tinycolor2": "^1.4.2"
   },
