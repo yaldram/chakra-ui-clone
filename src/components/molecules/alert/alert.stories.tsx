@@ -1,17 +1,70 @@
 import * as React from 'react'
-import {
-  Stack,
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-  CloseButton,
-  Box
-} from 'chakra-ui-clone'
 
-export function App() {
-  return (
-    <Stack m='2rem' direction='column' spacing='lg'>
+import { colorSchemeOptions } from '../../../theme/colors'
+import { Box, Stack } from '../../atoms/layout'
+import { CloseButton } from '../../atoms/form'
+import { Alert, AlertIcon, AlertTitle, AlertDescription, AlertProps } from '.'
+
+export default {
+  title: 'Molecules/Alert'
+}
+
+export const Playground = {
+  argTypes: {
+    colorScheme: {
+      name: 'colorScheme',
+      type: { name: 'string', required: false },
+      defaultValue: 'gray',
+      description: 'The Color Scheme for the button',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'gray' }
+      },
+      control: {
+        type: 'select',
+        options: colorSchemeOptions
+      }
+    },
+    status: {
+      name: 'status',
+      type: { name: 'string', required: false },
+      defaultValue: 'info',
+      description: 'The status of the alert',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'status' }
+      },
+      control: {
+        type: 'select',
+        options: ['info', 'warning', 'success', 'error']
+      }
+    },
+    variant: {
+      name: 'variant',
+      type: { name: 'string', required: false },
+      defaultValue: 'solid',
+      description: 'The variant of the alert',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'solid' }
+      },
+      control: {
+        type: 'select',
+        options: ['solid', 'subtle', 'left-accent', 'top-accent']
+      }
+    }
+  },
+  render: (args: AlertProps) => (
+    <Alert {...args}>
+      <AlertIcon />
+      There was an error processing your request
+    </Alert>
+  )
+}
+
+export const Default = {
+  render: () => (
+    <Stack direction='column' spacing='lg'>
       <Stack direction='column' spacing='lg'>
         <Alert>
           <AlertIcon />
