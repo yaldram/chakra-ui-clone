@@ -8,25 +8,28 @@ export default {
 }
 
 export const Playground = {
+  args: {
+    fontSize: 'md',
+    isTruncated: false,
+    noOfLines: '0'
+  },
   argTypes: {
     fontSize: {
       name: 'fontSize',
       type: { name: 'string', required: false },
-      defaultValue: 'md',
+      ...fontSizesOptions(),
       description: 'Font Size from theme.fontSizes',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: '-' }
       },
       control: {
-        type: 'select',
-        ...fontSizesOptions()
+        type: 'select'
       }
     },
     isTruncated: {
       name: 'isTruncated',
       type: { name: 'boolean', required: false },
-      defaultValue: false,
       description: 'Truncate Text.',
       table: {
         type: { summary: 'boolean' },
@@ -36,7 +39,6 @@ export const Playground = {
     noOfLines: {
       name: 'noOfLines',
       type: { name: 'number', required: false },
-      defaultValue: 0,
       description: 'Number of Lines to show',
       table: {
         type: { summary: 'number' },
@@ -62,33 +64,35 @@ export const Default = {
 }
 
 export const TextTypes = {
+  args: {
+    as: 'p'
+  },
   argTypes: {
     as: {
       name: 'as',
       type: { name: 'string', required: false },
-      defaultValue: 'p',
+      options: [
+        'i',
+        'u',
+        'abbr',
+        'cite',
+        'del',
+        'em',
+        'ins',
+        'kbd',
+        'mark',
+        's',
+        'samp',
+        'sub',
+        'sup'
+      ],
       description: 'Element type to render.',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'p' }
       },
       control: {
-        type: 'select',
-        options: [
-          'i',
-          'u',
-          'abbr',
-          'cite',
-          'del',
-          'em',
-          'ins',
-          'kbd',
-          'mark',
-          's',
-          'samp',
-          'sub',
-          'sup'
-        ]
+        type: 'select'
       }
     }
   },

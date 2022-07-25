@@ -11,53 +11,59 @@ export default {
 }
 
 export const Playground = {
+  args: {
+    colorScheme: 'gray',
+    s: 'md',
+    variant: 'solid',
+    isLoading: false,
+    loadingText: '',
+    spinnerPlacement: 'start',
+    isDisabled: false,
+    isFullWidth: false
+  },
   argTypes: {
     colorScheme: {
       name: 'colorScheme',
       type: { name: 'string', required: false },
-      defaultValue: 'gray',
+      options: colorSchemeOptions,
       description: 'The Color Scheme for the button',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'gray' }
       },
       control: {
-        type: 'select',
-        options: colorSchemeOptions
+        type: 'select'
       }
     },
     s: {
       name: 's',
       type: { name: 'string', required: false },
-      defaultValue: 'md',
+      options: ['xs', 'sm', 'md', 'lg'],
       description: 'Button size height width and vertical padding',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'md' }
       },
       control: {
-        type: 'select',
-        options: ['xs', 'sm', 'md', 'lg']
+        type: 'select'
       }
     },
     variant: {
       name: 'variant',
       type: { name: 'string', required: false },
-      defaultValue: 'solid',
+      options: ['link', 'outline', 'solid', 'ghost', 'unstyled'],
       description: 'Button variants',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'solid' }
       },
       control: {
-        type: 'select',
-        options: ['link', 'outline', 'solid', 'ghost', 'unstyled']
+        type: 'select'
       }
     },
     isLoading: {
       name: 'isLoading',
       type: { name: 'boolean', required: false },
-      defaultValue: false,
       description: 'Pass the isLoading prop to show loading state.',
       table: {
         type: { summary: 'string' },
@@ -67,7 +73,6 @@ export const Playground = {
     loadingText: {
       name: 'loadingText',
       type: { name: 'string', required: false },
-      defaultValue: '',
       description: 'Prop to show a spinner and the loading text.',
       table: {
         type: { summary: 'string' },
@@ -77,7 +82,7 @@ export const Playground = {
     spinnerPlacement: {
       name: 'spinnerPlacement',
       type: { name: 'string', required: false },
-      defaultValue: 'start',
+      options: ['start', 'end'],
       description: `When a loadingText is present, you can change the
       placement of the spinner element to either start or end.
       It is start by default.`,
@@ -86,14 +91,12 @@ export const Playground = {
         defaultValue: { summary: 'start' }
       },
       control: {
-        type: 'select',
-        options: ['start', 'end']
+        type: 'select'
       }
     },
     isDisabled: {
       name: 'isDisabled',
       type: { name: 'boolean', required: false },
-      defaultValue: false,
       description: 'Pass the isDisable prop to show disabled state.',
       table: {
         type: { summary: 'string' },
@@ -103,7 +106,6 @@ export const Playground = {
     isFullWidth: {
       name: 'isFullWidth',
       type: { name: 'boolean', required: false },
-      defaultValue: false,
       description: 'If true will expand full width.',
       table: {
         type: { summary: 'string' },

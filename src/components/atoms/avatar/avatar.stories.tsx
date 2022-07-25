@@ -10,25 +10,28 @@ export default {
 }
 
 export const Playground = {
+  args: {
+    s: 'md',
+    name: 'Segun Adebayo',
+    src: 'https://bit.ly/sage-adebayo'
+  },
   argTypes: {
     s: {
       name: 's',
       type: { name: 'string', required: false },
-      defaultValue: 'md',
+      options: ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', 'full'],
       description: 'Size for the Avatar',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'md' }
       },
       control: {
-        type: 'select',
-        options: ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', 'full']
+        type: 'select'
       }
     },
     name: {
       name: 'size',
       type: { name: 'string', required: false },
-      defaultValue: 'Segun Adebayo',
       description: `The name of the person in the avatar.
       -If src has loaded, the name will be used as the alt attribute of the img
       -If src is not loaded, the name will be used to create the initials`,
@@ -40,7 +43,6 @@ export const Playground = {
     src: {
       name: 'src',
       type: { name: 'string', required: false },
-      defaultValue: 'https://bit.ly/sage-adebayo',
       description: 'The image url of the Avatar',
       table: {
         type: { summary: 'string' },

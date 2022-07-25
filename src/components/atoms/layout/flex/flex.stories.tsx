@@ -8,74 +8,76 @@ export default {
 }
 
 export const Playground = {
+  args: {
+    direction: 'row',
+    justify: 'flex-start',
+    align: 'stretch'
+  },
   argTypes: {
     direction: {
       name: 'direction',
       type: { name: 'string', required: false },
-      defaultValue: 'row',
       description: 'Shorthand for flexDirection style prop',
+      options: [
+        'initial',
+        'inherit',
+        'unset',
+        'revert',
+        'row',
+        'row-reverse',
+        'column',
+        'column-reverse'
+      ],
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'row' }
       },
       control: {
-        type: 'select',
-        options: [
-          'initial',
-          'inherit',
-          'unset',
-          'revert',
-          'row',
-          'row-reverse',
-          'column',
-          'column-reverse'
-        ]
+        type: 'select'
       }
     },
     justify: {
       name: 'justify',
       type: { name: 'string', required: false },
-      defaultValue: 'flex-start',
+      options: [
+        'justify-content',
+        'flex-start',
+        'flex-end',
+        'center',
+        'space-between',
+        'space-around',
+        'space-evenly',
+        'initial',
+        'inherit'
+      ],
       description: 'Shorthand for justifyContent style prop',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'flex-start' }
       },
       control: {
-        type: 'select',
-        options: [
-          'justify-content',
-          'flex-start',
-          'flex-end',
-          'center',
-          'space-between',
-          'space-around',
-          'space-evenly',
-          'initial',
-          'inherit'
-        ]
+        type: 'select'
       }
     },
     align: {
       name: 'align',
       type: { name: 'string', required: false },
-      defaultValue: 'stretch',
+      options: [
+        'stretch',
+        'center',
+        'flex-start',
+        'flex-end',
+        'baseline',
+        'initial',
+        'inherit'
+      ],
       description: 'Shorthand for alignItems style prop',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'stretch' }
       },
       control: {
-        type: 'select',
-        options: [
-          'stretch',
-          'center',
-          'flex-start',
-          'flex-end',
-          'baseline',
-          'initial',
-          'inherit'
-        ]
+        type: 'select'
       }
     }
   },
@@ -95,28 +97,30 @@ export const Playground = {
 }
 
 export const FlexSpacer = {
+  args: {
+    direction: 'row'
+  },
   argTypes: {
     direction: {
       name: 'direction',
       type: { name: 'string', required: false },
-      defaultValue: 'row',
+      options: [
+        'initial',
+        'inherit',
+        'unset',
+        'revert',
+        'row',
+        'row-reverse',
+        'column',
+        'column-reverse'
+      ],
       description: 'Shorthand for flexDirection style prop',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'row' }
       },
       control: {
-        type: 'select',
-        options: [
-          'initial',
-          'inherit',
-          'unset',
-          'revert',
-          'row',
-          'row-reverse',
-          'column',
-          'column-reverse'
-        ]
+        type: 'select'
       }
     }
   },

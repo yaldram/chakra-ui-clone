@@ -43,7 +43,6 @@ export const Icon = React.forwardRef<SVGElement, IconProps>((props, ref) => {
     flexShrink: 0,
     color,
     viewBox,
-    ref,
     focusable
   }
 
@@ -55,7 +54,7 @@ export const Icon = React.forwardRef<SVGElement, IconProps>((props, ref) => {
 
   return (
     <Box
-      // @ts-ignore
+      // @ts-expect-error: Box expects ref of type HtmlDivElement
       ref={ref}
       as='svg'
       verticalAlign='middle'

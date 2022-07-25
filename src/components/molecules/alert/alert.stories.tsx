@@ -10,47 +10,49 @@ export default {
 }
 
 export const Playground = {
+  args: {
+    colorScheme: 'gray',
+    status: 'info',
+    variant: 'solid'
+  },
   argTypes: {
     colorScheme: {
       name: 'colorScheme',
       type: { name: 'string', required: false },
-      defaultValue: 'gray',
+      options: colorSchemeOptions,
       description: 'The Color Scheme for the button',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'gray' }
       },
       control: {
-        type: 'select',
-        options: colorSchemeOptions
+        type: 'select'
       }
     },
     status: {
       name: 'status',
       type: { name: 'string', required: false },
-      defaultValue: 'info',
+      options: ['info', 'warning', 'success', 'error'],
       description: 'The status of the alert',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'status' }
       },
       control: {
-        type: 'select',
-        options: ['info', 'warning', 'success', 'error']
+        type: 'select'
       }
     },
     variant: {
       name: 'variant',
       type: { name: 'string', required: false },
-      defaultValue: 'solid',
+      options: ['solid', 'subtle', 'left-accent', 'top-accent'],
       description: 'The variant of the alert',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'solid' }
       },
       control: {
-        type: 'select',
-        options: ['solid', 'subtle', 'left-accent', 'top-accent']
+        type: 'select'
       }
     }
   },

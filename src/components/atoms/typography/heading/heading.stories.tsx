@@ -7,11 +7,17 @@ export default {
 }
 
 export const Playground = {
+  args: {
+    variant: 'md',
+    isTruncated: false,
+    noOfLines: '0',
+    as: 'h2'
+  },
   argTypes: {
     variant: {
       name: 'variant',
       type: { name: 'string', required: false },
-      defaultValue: 'md',
+      options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
       description: `Responsive Values.
       The font size of the heading will
       automatically decrease in size for smaller screens`,
@@ -20,14 +26,12 @@ export const Playground = {
         defaultValue: { summary: 'md' }
       },
       control: {
-        type: 'select',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl']
+        type: 'select'
       }
     },
     isTruncated: {
       name: 'isTruncated',
       type: { name: 'boolean', required: false },
-      defaultValue: false,
       description: 'Truncate Text.',
       table: {
         type: { summary: 'boolean' },
@@ -37,7 +41,6 @@ export const Playground = {
     noOfLines: {
       name: 'noOfLines',
       type: { name: 'number', required: false },
-      defaultValue: '0',
       description: 'Number of Lines to show',
       table: {
         type: { summary: 'number' },
@@ -47,15 +50,14 @@ export const Playground = {
     as: {
       name: 'as',
       type: { name: 'string', required: false },
-      defaultValue: 'h2',
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
       description: 'Element type to render.',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'h2' }
       },
       control: {
-        type: 'select',
-        options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+        type: 'select'
       }
     }
   },

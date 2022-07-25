@@ -9,11 +9,15 @@ export default {
 }
 
 export const simpleGrid = {
+  args: {
+    minChildWidth: '170px',
+    spacingY: 'md',
+    spacingX: 'lg'
+  },
   argTypes: {
     minChildWidth: {
       name: 'minChildWidth',
       type: { name: 'string', required: false },
-      defaultValue: '170px',
       description: `The width at which child elements will
       break into columns. Pass a number for pixel values
       or a string for any other valid CSS length.`,
@@ -25,29 +29,27 @@ export const simpleGrid = {
     spacingY: {
       name: 'spacingY',
       type: { name: 'string', required: false },
-      defaultValue: 'md',
+      ...spacingOptions(),
       description: 'The column gap between the grid items.',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: '-' }
       },
       control: {
-        type: 'select',
-        ...spacingOptions()
+        type: 'select'
       }
     },
     spacingX: {
       name: 'spacingX',
       type: { name: 'string', required: false },
-      defaultValue: 'lg',
+      ...spacingOptions(),
       description: 'The row gap between the grid items.',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: '-' }
       },
       control: {
-        type: 'select',
-        ...spacingOptions()
+        type: 'select'
       }
     }
   },

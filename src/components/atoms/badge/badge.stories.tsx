@@ -11,33 +11,35 @@ export default {
 }
 
 export const Playground = {
+  args: {
+    variant: 'subtle',
+    colorScheme: 'gray'
+  },
   argTypes: {
     variant: {
       name: 'variant',
       type: { name: 'string', required: false },
-      defaultValue: 'subtle',
+      options: ['outline', 'solid', 'subtle'],
       description: 'Variant for the Badge',
       table: {
         type: { summary: 'string' },
-        defaultValue: { summary: 'sublte' }
+        defaultValue: { summary: 'subtle' }
       },
       control: {
-        type: 'select',
-        options: ['outline', 'solid', 'subtle']
+        type: 'select'
       }
     },
     colorScheme: {
       name: 'colorScheme',
       type: { name: 'string', required: false },
-      defaultValue: 'gray',
+      options: colorSchemeOptions,
       description: 'The Color Scheme for the button',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'gray' }
       },
       control: {
-        type: 'select',
-        options: colorSchemeOptions
+        type: 'select'
       }
     }
   },

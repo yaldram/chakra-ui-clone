@@ -11,55 +11,56 @@ export default {
 const spacingSelect = {
   name: 'spacing',
   type: { name: 'string', required: false },
-  defaultValue: 'lg',
+  ...spacingOptions(),
   description: 'The gap between stack items.',
   table: {
     type: { summary: 'string' },
     defaultValue: { summary: 'md' }
   },
   control: {
-    type: 'select',
-    ...spacingOptions()
+    type: 'select'
   }
 }
 
 const alignSelect = {
   name: 'align',
   type: { name: 'string', required: false },
-  defaultValue: 'center',
+  options: [
+    'stretch',
+    'center',
+    'flex-start',
+    'flex-end',
+    'baseline',
+    'initial',
+    'inherit'
+  ],
   description: 'Shorthand for alignItems style prop',
   table: {
     type: { summary: 'string' },
     defaultValue: { summary: 'center' }
   },
   control: {
-    type: 'select',
-    options: [
-      'stretch',
-      'center',
-      'flex-start',
-      'flex-end',
-      'baseline',
-      'initial',
-      'inherit'
-    ]
+    type: 'select'
   }
 }
 
 export const Playground = {
+  args: {
+    direction: 'row',
+    spacing: 'md'
+  },
   argTypes: {
     direction: {
       name: 'direction',
       type: { name: 'string', required: false },
-      defaultValue: 'row',
+      options: ['row', 'row-reverse', 'column', 'column-reverse'],
       description: 'Shorthand for flexDirection style prop',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'row' }
       },
       control: {
-        type: 'select',
-        options: ['row', 'row-reverse', 'column', 'column-reverse']
+        type: 'select'
       }
     },
     spacing: spacingSelect
@@ -80,19 +81,23 @@ export const Playground = {
 }
 
 export const horizontalStack = {
+  args: {
+    direction: 'row',
+    spacing: 'md',
+    align: 'center'
+  },
   argTypes: {
     direction: {
       name: 'direction',
       type: { name: 'string', required: false },
-      defaultValue: 'row',
+      options: ['row', 'row-reverse'],
       description: 'Shorthand for flexDirection style prop',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'row' }
       },
       control: {
-        type: 'select',
-        options: ['row', 'row-reverse']
+        type: 'select'
       }
     },
     spacing: spacingSelect,
@@ -114,19 +119,23 @@ export const horizontalStack = {
 }
 
 export const verticalStack = {
+  args: {
+    direction: 'row',
+    spacing: 'md',
+    align: 'center'
+  },
   argTypes: {
     direction: {
       name: 'direction',
       type: { name: 'string', required: false },
-      defaultValue: 'column',
+      options: ['column', 'column-reverse'],
       description: 'Shorthand for flexDirection style prop',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'row' }
       },
       control: {
-        type: 'select',
-        options: ['column', 'column-reverse']
+        type: 'select'
       }
     },
     spacing: spacingSelect,

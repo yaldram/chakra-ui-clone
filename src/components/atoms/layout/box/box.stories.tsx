@@ -13,11 +13,15 @@ export const Playground = {
       default: 'grey'
     }
   },
+  args: {
+    bg: 'green800',
+    color: 'white',
+    p: 'md'
+  },
   argTypes: {
     bg: {
       name: 'bg',
       type: { name: 'string', required: false },
-      defaultValue: 'green800',
       description: 'Background Color CSS Prop for the component',
       table: {
         type: { summary: 'string' },
@@ -27,7 +31,6 @@ export const Playground = {
     color: {
       name: 'color',
       type: { name: 'string', required: false },
-      defaultValue: 'white',
       description: 'Color CSS Prop for the component',
       table: {
         type: { summary: 'string' },
@@ -37,7 +40,7 @@ export const Playground = {
     p: {
       name: 'p',
       type: { name: 'string', required: false },
-      defaultValue: 'md',
+      ...spacingOptions(),
       description: `Padding CSS prop for the Component shothand for padding.
         We also have pt, pb, pl, pr.`,
       table: {
@@ -45,8 +48,7 @@ export const Playground = {
         defaultValue: { summary: '-' }
       },
       control: {
-        type: 'select',
-        ...spacingOptions()
+        type: 'select'
       }
     }
   },

@@ -18,47 +18,49 @@ export default {
 }
 
 export const Playground = {
+  args: {
+    variant: 'subtle',
+    colorScheme: 'gray',
+    s: 'md'
+  },
   argTypes: {
     variant: {
       name: 'variant',
       type: { name: 'string', required: false },
-      defaultValue: 'subtle',
+      options: ['outline', 'solid', 'subtle'],
       description: 'Variant for the Tag',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'sublte' }
       },
       control: {
-        type: 'select',
-        options: ['outline', 'solid', 'subtle']
+        type: 'select'
       }
     },
     colorScheme: {
       name: 'colorScheme',
       type: { name: 'string', required: false },
-      defaultValue: 'gray',
+      options: colorSchemeOptions,
       description: 'The Color Scheme for the button',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'gray' }
       },
       control: {
-        type: 'select',
-        options: colorSchemeOptions
+        type: 'select'
       }
     },
     s: {
       name: 's',
       type: { name: 'string', required: false },
-      defaultValue: 'md',
+      options: ['sm', 'md', 'lg'],
       description: 'Tag height width and horizontal padding',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'md' }
       },
       control: {
-        type: 'select',
-        options: ['sm', 'md', 'lg']
+        type: 'select'
       }
     }
   },

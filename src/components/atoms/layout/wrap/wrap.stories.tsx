@@ -9,65 +9,67 @@ export default {
 }
 
 export const Playground = {
+  args: {
+    spacing: 'md',
+    justify: 'flex-start',
+    align: 'stretch'
+  },
   argTypes: {
     spacing: {
       name: 'spacing',
       type: { name: 'string', required: false },
-      defaultValue: 'md',
+      ...spacingOptions(),
       description: `Margin for the child elements`,
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'md' }
       },
       control: {
-        type: 'select',
-        ...spacingOptions()
+        type: 'select'
       }
     },
     justify: {
       name: 'justify',
       type: { name: 'string', required: false },
-      defaultValue: 'flex-start',
+      options: [
+        'justify-content',
+        'flex-start',
+        'flex-end',
+        'center',
+        'space-between',
+        'space-around',
+        'space-evenly',
+        'initial',
+        'inherit'
+      ],
       description: 'Shorthand for justifyContent style prop',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'flex-start' }
       },
       control: {
-        type: 'select',
-        options: [
-          'justify-content',
-          'flex-start',
-          'flex-end',
-          'center',
-          'space-between',
-          'space-around',
-          'space-evenly',
-          'initial',
-          'inherit'
-        ]
+        type: 'select'
       }
     },
     align: {
       name: 'align',
       type: { name: 'string', required: false },
-      defaultValue: 'stretch',
+      options: [
+        'stretch',
+        'center',
+        'flex-start',
+        'flex-end',
+        'baseline',
+        'initial',
+        'inherit'
+      ],
       description: 'Shorthand for alignItems style prop',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'stretch' }
       },
       control: {
-        type: 'select',
-        options: [
-          'stretch',
-          'center',
-          'flex-start',
-          'flex-end',
-          'baseline',
-          'initial',
-          'inherit'
-        ]
+        type: 'select'
       }
     }
   },

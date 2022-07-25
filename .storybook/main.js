@@ -1,16 +1,15 @@
 module.exports = {
-  features: {
-    previewCsfV3: true
-  },
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    'storybook-readme/register',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-knobs',
-    '@storybook/addon-a11y'
+    '@storybook/addon-interactions'
   ],
-  typescript: {
-    reactDocgen: 'react-docgen-typescript'
+  framework: '@storybook/react',
+  core: {
+    builder: '@storybook/builder-vite'
+  },
+  features: {
+    storyStoreV7: true
   }
 }
