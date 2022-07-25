@@ -14,6 +14,7 @@ import {
 import { AppTheme } from '../../../../theme'
 
 import { colors } from '../../../../theme/colors'
+import { useFormControl } from '../form-control'
 
 type InputSizes = 'xs' | 'sm' | 'md' | 'lg'
 
@@ -270,8 +271,9 @@ const StyledInput = styled.input.attrs((props: InputProps) => ({
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (props, ref) => {
     const { variant = 'outline', s = 'md', ...delegated } = props
+    const input = useFormControl<HTMLInputElement>(delegated)
 
-    return <StyledInput ref={ref} s={s} variant={variant} {...delegated} />
+    return <StyledInput ref={ref} s={s} variant={variant} {...input} />
   }
 )
 
