@@ -27,6 +27,7 @@ import {
   PositionProps,
   BorderProps
 } from 'styled-system'
+import { CSSProperties } from 'react'
 
 type BoxOptions = {
   w?: LayoutProps['width']
@@ -38,6 +39,11 @@ type BoxOptions = {
   shrink?: FlexShrinkProps['flexShrink']
   marginStart?: SpaceProps['marginLeft']
   marginEnd?: SpaceProps['marginLeft']
+  paddingStart?: SpaceProps['paddingLeft']
+  paddingEnd?: SpaceProps['paddingLeft']
+  borderStartRadius?: BorderProps['borderTopLeftRadius']
+  borderEndRadius?: BorderProps['borderTopLeftRadius']
+  pointerEvents?: CSSProperties['pointerEvents']
 }
 
 export type BoxProps = SpaceProps &
@@ -100,6 +106,25 @@ export const Box = styled.div.withConfig({
     marginEnd: {
       property: 'marginInlineEnd',
       scale: 'space'
+    },
+    paddingStart: {
+      property: 'paddingInlineStart',
+      scale: 'space'
+    },
+    paddingEnd: {
+      property: 'paddingInlineEnd',
+      scale: 'space'
+    },
+    borderStartRadius: {
+      properties: ['borderTopLeftRadius', 'borderBottomLeftRadius'],
+      scale: 'radii'
+    },
+    borderEndRadius: {
+      properties: ['borderTopRightRadius', 'borderBottomRightRadius'],
+      scale: 'radii'
+    },
+    pointerEvents: {
+      property: 'pointerEvents'
     }
   })}
 `

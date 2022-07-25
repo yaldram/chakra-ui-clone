@@ -13,7 +13,9 @@ import {
   ColorProps,
   BorderProps,
   FontSizeProps,
-  LayoutProps
+  LayoutProps,
+  alignSelf,
+  AlignSelfProps
 } from 'styled-system'
 
 import { ColorScheme as ButtonColorScheme } from '../../../../theme/colors'
@@ -49,6 +51,7 @@ export type ButtonProps = ColorProps &
   LayoutProps &
   ButtonOptions &
   SpaceProps &
+  AlignSelfProps &
   React.ComponentPropsWithoutRef<'button'> & { children?: React.ReactNode }
 
 function variantGhost(colorScheme: ButtonColorScheme) {
@@ -203,7 +206,6 @@ const BaseButton = styled.button<ButtonProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
 
   padding: 0.25em 0.75em;
   font-weight: 500;
@@ -250,7 +252,7 @@ const BaseButton = styled.button<ButtonProps>`
   })}
 
 
-  ${compose(color, border, layout, space, fontSize)}
+  ${compose(color, border, layout, space, fontSize, alignSelf)}
 `
 
 type ButtonContentProps = Pick<
