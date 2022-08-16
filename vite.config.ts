@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import typescript from '@rollup/plugin-typescript'
 import { resolve } from 'path'
 
-import { peerDependencies, dependencies } from './package.json'
+import { peerDependencies } from './package.json'
 
 export default defineConfig({
   build: {
@@ -12,14 +12,11 @@ export default defineConfig({
     lib: {
       name: 'ChakraUiClone',
       entry: resolve(__dirname, 'src/index.tsx'),
-      formats: ['es', 'cjs'],
+      formats: ['es', 'umd'],
       fileName: 'index'
     },
     rollupOptions: {
-      external: [
-        ...Object.keys(peerDependencies),
-        ...Object.keys(dependencies)
-      ],
+      external: [...Object.keys(peerDependencies)],
       plugins: [typescript({ tsconfig: './tsconfig.json' })]
     }
   }
