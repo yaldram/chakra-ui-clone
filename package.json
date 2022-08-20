@@ -1,12 +1,13 @@
 {
-  "name": "chakra-ui-clone",
+  "name": "@yaldram/chakra-ui-clone",
   "version": "1.0.0",
   "description": "Chakra UI Elements Clone",
   "author": "https://github.com/yaldram",
   "license": "MIT",
   "repository": "https://github.com/yaldram/chakra-ui-clone",
-  "main": "./dist/index.umd.js",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "source": "src/index.tsx",
   "files": [
     "dist"
@@ -103,5 +104,8 @@
     "commitizen": {
       "path": "./node_modules/git-cz"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/yaldram"
   }
 }
