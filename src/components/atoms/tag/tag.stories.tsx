@@ -10,8 +10,11 @@ import {
   TagRightIcon,
   TagLabel,
   TagCloseButton,
-  TagProps
+  TagProps,
+  TagSizes
 } from '.'
+
+const tagSizes: TagSizes[] = ['sm', 'md', 'lg']
 
 export default {
   title: 'Atoms/Tags'
@@ -76,14 +79,14 @@ export const Default = {
         <Tag s='lg'>Sample Tag</Tag>
       </HStack>
       <HStack>
-        {['sm', 'md', 'lg'].map((s) => (
+        {tagSizes.map((s) => (
           <Tag s={s} key={s} variant='solid' colorScheme='teal'>
             Sample Tag
           </Tag>
         ))}
       </HStack>
       <HStack>
-        {['sm', 'md', 'lg'].map((s) => (
+        {tagSizes.map((s) => (
           <Tag s={s} key={s} variant='subtle' colorScheme='cyan'>
             <TagLeftIcon size='12px' as={EmailIcon} />
             <TagLabel>Sample Tag</TagLabel>
@@ -91,7 +94,7 @@ export const Default = {
         ))}
       </HStack>
       <HStack>
-        {['sm', 'md', 'lg'].map((s) => (
+        {tagSizes.map((s) => (
           <Tag s={s} key={s} variant='outline' colorScheme='cyan'>
             <TagLabel>Sample Tag</TagLabel>
             <TagRightIcon size='12px' as={EmailIcon} />
@@ -99,7 +102,7 @@ export const Default = {
         ))}
       </HStack>
       <HStack>
-        {['sm', 'md', 'lg'].map((s) => (
+        {tagSizes.map((s) => (
           <Tag
             borderRadius='9999px'
             s={s}

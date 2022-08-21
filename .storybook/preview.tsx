@@ -22,10 +22,14 @@ export const parameters: Parameters = {
   }
 }
 
-export const decorators = [
-  (Story) => (
-    <ChakraProvider>
-      <Story />
-    </ChakraProvider>
-  )
-]
+const withChakraProvider = (Story) => (
+  <ChakraProvider>
+    <Story />
+  </ChakraProvider>
+)
+
+/**
+ * This decorator is a global decorator will
+ * be applied to each and every story
+ */
+export const decorators = [withChakraProvider]

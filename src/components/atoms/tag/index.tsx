@@ -8,9 +8,9 @@ import { Icon, IconProps } from '../icon/icon'
 import { CloseButtonProps, CloseButton } from '../form/close-button'
 import { Box, BoxProps } from '../layout'
 
-type TagVariants = 'outline' | 'solid' | 'subtle'
+export type TagVariants = 'outline' | 'solid' | 'subtle'
 
-type TagSizes = 'sm' | 'md' | 'lg'
+export type TagSizes = 'sm' | 'md' | 'lg'
 
 function variantSolid(colorScheme: TagColorScheme) {
   return {
