@@ -19,6 +19,11 @@ module.exports = {
      * Configures Storybook to load stories on demand, 
      * rather than during boot up.
      */
-    storyStoreV7: true
+    storyStoreV7: true,
+    /**
+     * Configures Storybook to load the interactions 
+     * debugger for component interaction testing
+     */
+    interactionsDebugger: true
   }
 }

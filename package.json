@@ -29,7 +29,8 @@
     "test:lint": "eslint .",
     "pretty": "prettier . --write",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test-storybook": "test-storybook"
   },
   "peerDependencies": {
     "framer-motion": "^7.2.0",
@@ -47,7 +48,9 @@
     "@storybook/addon-links": "^6.5.10",
     "@storybook/addons": "^6.5.10",
     "@storybook/builder-vite": "^0.2.2",
+    "@storybook/jest": "^0.0.10",
     "@storybook/react": "^6.5.10",
+    "@storybook/test-runner": "^0.7.0",
     "@storybook/testing-library": "^0.0.13",
     "@storybook/theming": "^6.5.10",
     "@types/node": "^12.12.38",
@@ -81,7 +84,6 @@
     "react": "^18.2.0",
     "react-docgen-typescript": "^2.2.2",
     "react-dom": "^18.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
     "styled-components": "^5.3.5",
     "styled-system": "^5.1.5",
     "typescript": "^4.7.4",
