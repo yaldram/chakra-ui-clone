@@ -71,7 +71,7 @@ jobs:
         run: aws s3 sync ./storybook-static/ s3://$CI_HEAD_REF_SLUG-$CI_PR_SHA_SHORT --delete
 
       - name: Run Storybook Tests
-        run: yarn test-storybook --url http://${{ env.CI_HEAD_REF_SLUG }}-${{ env.CI_PR_SHA_SHORT }}.s3-website.{{ secrets.AWS_REGION }}.amazonaws.com 
+        run: yarn test-storybook --url http://${{ env.CI_HEAD_REF_SLUG }}-${{ env.CI_PR_SHA_SHORT }}.s3-website.ap-south-1.amazonaws.com 
 
       - name: Comment the website Link on the Pull Request 
         uses: peter-evans/create-or-update-comment@v2
