@@ -52,7 +52,7 @@ export const Demo = {
     await expect(usernameHelpText).toBeInTheDocument()
 
     await expect(usernameHelpText).toHaveTextContent(
-      'Your username has to be an awesome one.'
+      'Your username has to be awesome.'
     )
 
     await expect(passwordHelpText).toBeInTheDocument()
