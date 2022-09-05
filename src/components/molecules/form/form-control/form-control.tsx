@@ -130,19 +130,11 @@ function useFormControlProvider(props: FormControlContext) {
       'data-disabled': dataAttr(isDisabled),
       'data-invalid': dataAttr(isInvalid),
       'data-readonly': dataAttr(isReadOnly),
-      id: props.id ?? labelId,
-      htmlFor: props.htmlFor ?? id
+      id: componentProps.id ?? labelId,
+      // @ts-expect-error: type mismatch for htmlFor
+      htmlFor: componentProps.htmlFor ?? id
     }),
-    [
-      id,
-      isDisabled,
-      isFocused,
-      isInvalid,
-      isReadOnly,
-      labelId,
-      props.id,
-      props.htmlFor
-    ]
+    [id, isDisabled, isFocused, isInvalid, isReadOnly, labelId]
   )
 
   const getErrorMessageProps = React.useCallback<PropGetter>(
