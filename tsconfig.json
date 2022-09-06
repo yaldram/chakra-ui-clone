@@ -31,6 +31,7 @@
     "dist",
     "example",
     "**/*.stories.tsx",
-    "**/*.test.tsx"
+    "**/*.test.tsx",
+    "**/*.demo.tsx"
   ]
 }

@@ -12,7 +12,7 @@ export default defineConfig({
     lib: {
       name: 'ChakraUiClone',
       entry: resolve(__dirname, 'src/index.tsx'),
-      formats: ['es', 'cjs'],
+      formats: ['es', 'cjs', 'umd'],
       fileName: 'index'
     },
     rollupOptions: {
