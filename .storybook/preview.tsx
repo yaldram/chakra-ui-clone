@@ -1,5 +1,6 @@
 import React from 'react'
 import { Parameters } from '@storybook/addons'
+import { configure } from '@storybook/testing-library'
 
 import { ChakraProvider } from '../src/provider'
 
@@ -28,8 +29,18 @@ const withChakraProvider = (Story) => (
   </ChakraProvider>
 )
 
+const testingConfiguration = (Story) => {
+  /**
+   * configure react testing library such that
+   * it uses id instead of data-test-id when
+   * we use the getByTestId function
+   */
+  configure({ testIdAttribute: 'id' })
+  return Story()
+}
+
 /**
  * This decorator is a global decorator will
  * be applied to each and every story
  */
-export const decorators = [withChakraProvider]
+export const decorators = [withChakraProvider, testingConfiguration]
