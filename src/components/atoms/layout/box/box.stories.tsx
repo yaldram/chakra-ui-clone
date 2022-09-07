@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StoryObj } from '@storybook/react'
 
 import { spacingOptions } from '../../../../theme/spacing'
 import { Box, BoxProps } from '.'
@@ -7,10 +8,13 @@ export default {
   title: 'Atoms/Layout/Box'
 }
 
-export const Playground = {
+export const Playground: StoryObj<BoxProps> = {
   parameters: {
     backgrounds: {
       default: 'grey'
+    },
+    controls: {
+      exclude: ['bg']
     }
   },
   args: {
@@ -52,12 +56,12 @@ export const Playground = {
       }
     }
   },
-  render: (args: BoxProps) => <Box {...args}>Hello</Box>
+  render: (args) => <Box {...args}>Hello</Box>
 }
 
-export const Default = {
-  render: (args: BoxProps) => (
-    <Box bg='red500' color='white' p='md' {...args}>
+export const Default: StoryObj<BoxProps> = {
+  render: () => (
+    <Box bg='red500' color='white' p='md'>
       Submit.
     </Box>
   )

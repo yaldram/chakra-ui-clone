@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { within, userEvent, configure } from '@storybook/testing-library'
+import { within, userEvent } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import { Input } from '../input/input'
@@ -11,13 +11,11 @@ export default {
   title: 'Molecules/Form/FormControl'
 }
 
-configure({ testIdAttribute: 'id' })
-
 export const Default = {
   render: () => {
     return (
       <FormControl isRequired>
-        <FormLabel>Email</FormLabel>
+        <FormLabel>Your Email</FormLabel>
         <Input type='email' />
         <FormHelperText>We will not share your email</FormHelperText>
       </FormControl>
