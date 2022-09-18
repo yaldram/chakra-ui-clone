@@ -1,6 +1,6 @@
 # chakra-ui-clone
 
-> Chakra UI Elements cloned using styled-components and styled-system.
+> Chakra UI Elements cloned using styled-components and styled-system. Please check the deployed storybook [here](http://yaldram-chakra-ui-clone.s3-website.ap-south-1.amazonaws.com/?path=/story/atoms-avatar--playground).
 
 ### Introduction
 
