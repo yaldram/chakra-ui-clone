@@ -54,7 +54,7 @@ export const Playground = {
       }
     },
     s: {
-      name: 's',
+      name: 'size (s)',
       type: { name: 'string', required: false },
       options: ['sm', 'md', 'lg'],
       description: 'Tag height width and horizontal padding',

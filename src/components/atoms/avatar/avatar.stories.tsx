@@ -17,7 +17,7 @@ export const Playground = {
   },
   argTypes: {
     s: {
-      name: 's',
+      name: 'size (s)',
       type: { name: 'string', required: false },
       options: ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', 'full'],
       description: 'Size for the Avatar',
@@ -30,7 +30,7 @@ export const Playground = {
       }
     },
     name: {
-      name: 'size',
+      name: 'name',
       type: { name: 'string', required: false },
       description: `The name of the person in the avatar.
       -If src has loaded, the name will be used as the alt attribute of the img

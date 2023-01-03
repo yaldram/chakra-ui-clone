@@ -36,7 +36,7 @@ export const Playground = {
       }
     },
     s: {
-      name: 's',
+      name: 'size (s)',
       type: { name: 'string', required: false },
       options: ['xs', 'sm', 'md', 'lg'],
       description: 'Button size height width and vertical padding',
