@@ -19,7 +19,7 @@ export default defineConfig({
     rollupOptions: {
       external: [...Object.keys(peerDependencies)],
       // @ts-expect-error: Type mismatch
-      plugins: [typescript({ tsconfig: './tsconfig' })]
+      plugins: [typescript({ tsconfig: './tsconfig.json' })]
     }
   }
 })
