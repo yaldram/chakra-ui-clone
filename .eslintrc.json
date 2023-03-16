@@ -43,10 +43,20 @@
     "import/prefer-default-export": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "max-len": ["warn", { "code": 80 }],
+    "max-len": [
+      "warn",
+      {
+        "code": 80
+      }
+    ],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".tsx"]
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",

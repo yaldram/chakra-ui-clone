@@ -11,13 +11,15 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       name: 'ChakraUiClone',
-      entry: resolve(__dirname, 'src/index.tsx'),
-      formats: ['es', 'cjs', 'umd'],
+      entry: resolve(__dirname, 'src/index.ts'),
+      formats: ['es'],
       fileName: 'index'
     },
+
     rollupOptions: {
       external: [...Object.keys(peerDependencies)],
-      plugins: [typescript({ tsconfig: './tsconfig.json' })]
+      // @ts-expect-error: Type mismatch
+      plugins: [typescript({ tsconfig: './tsconfig' })]
     }
   }
 })

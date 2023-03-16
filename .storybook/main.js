@@ -1,18 +1,9 @@
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    /**
-     * addon-interactions are used for 
-     * interactive stories. Must be listed after
-     * addon-actions & addon-essentials
-     */
-    '@storybook/addon-interactions'
-  ],
-  framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-vite'
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions'],
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
   },
   features: {
     /**
@@ -25,5 +16,8 @@ module.exports = {
      * debugger for component interaction testing
      */
     interactionsDebugger: true
+  },
+  docs: {
+    autodocs: true
   }
-}
+};

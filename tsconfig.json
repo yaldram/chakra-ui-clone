@@ -26,12 +26,5 @@
     "noEmit": true
   },
   "include": ["src"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "example",
-    "**/*.stories.tsx",
-    "**/*.test.tsx",
-    "**/*.demo.tsx"
-  ]
+  "exclude": ["node_modules", "dist", "**/*.stories.tsx", "**/*.test.tsx"]
 }
